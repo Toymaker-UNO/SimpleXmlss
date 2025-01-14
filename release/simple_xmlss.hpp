@@ -2121,7 +2121,7 @@ namespace model {
 class cell {
 public:
   cell(const cell_configuration& a_configuration)
-    : configuration(a_configuration), style_id(0) {}
+    : configuration(a_configuration), style_id(0), cell_function_return(false) {}
 
   //cell configuration
   const cell_configuration configuration;
@@ -2137,6 +2137,10 @@ public:
   cell_comment comment;
   std::string hyperlink;
   unsigned int style_id;
+
+  //cell error
+  bool cell_function_return;
+  std::string cell_function_error_message;
 };
 
 } // namespace model
@@ -2453,6 +2457,86 @@ private:
 #endif /* SIMPLE_XMLSS_WRITER_CELL_HPP */
 
 
+#ifndef SIMPLE_XMLSS_API_CELL_MACRO_FUNCTIONS_HPP
+#define SIMPLE_XMLSS_API_CELL_MACRO_FUNCTIONS_HPP
+
+namespace simple_xmlss {
+
+namespace api {
+
+#define CHECK_MERGE_FLAG(a_cell, a_arg_string, a_trace) {                                                                 \
+  if(true == a_cell.configuration.merge_flag) {                                                                           \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] This is MERGED Cell. Discard: " + arg_string;                                            \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+#define CHECK_STRING_FLAG(a_cell, a_arg_string, a_trace) {                                                                \
+  if(true == a_cell.status_flag.string_flag) {                                                                            \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] This cell already has a STRING defined. Discard: " + arg_string;                         \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+#define CHECK_NUMBER_FLAG(a_cell, a_arg_string, a_trace) {                                                                \
+  if(true == a_cell.status_flag.number_flag) {                                                                            \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] This cell already has a NUMBER defined. Discard: " + arg_string;                         \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+#define CHECK_DATE_TIME_FLAG(a_cell, a_arg_string, a_trace) {                                                             \
+  if(true == a_cell.status_flag.date_time_flag) {                                                                         \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] This cell already has a DATE_TIME defined. Discard: " + arg_string;                      \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+#define CHECK_FORMULA_FLAG(a_cell, a_arg_string, a_trace) {                                                               \
+  if(true == a_cell.status_flag.formula_flag) {                                                                           \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] This cell already has a FORMULA defined. Discard: " + arg_string;                        \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+#define CHECK_COMMENT_FLAG(a_cell, a_arg_string, a_trace) {                                                               \
+  if(true == a_cell.status_flag.comment_flag) {                                                                           \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] This cell already has a COMMENT defined. Discard: " + arg_string;                        \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+#define CHECK_CONTENTS_EXIST(a_cell, a_arg_string, a_trace) {                                                             \
+  if(false == a_cell.status_flag.string_flag &&                                                                           \
+     false == a_cell.status_flag.number_flag &&                                                                           \
+     false == a_cell.status_flag.date_time_flag &&                                                                        \
+     false == a_cell.status_flag.formula_flag) {                                                                          \
+      std::string arg_string = a_arg_string;                                                                              \
+      std::string msg = "[ERROR] STRING, NUMBER, DATE_TIME and FORMULA are not defined together. Discard:" + arg_string;  \
+      handling_error(a_cell,msg,a_trace);                                                                                 \
+      return;                                                                                                             \
+    }                                                                                                                     \
+}
+
+} // namespace api
+
+} // namespace simple_xmlss
+
+#endif /* SIMPLE_XMLSS_API_CELL_MACRO_FUNCTIONS_HPP */
+
+
 #ifndef SIMPLE_XMLSS_API_CELL_HPP
 #define SIMPLE_XMLSS_API_CELL_HPP
 
@@ -2461,6 +2545,7 @@ private:
 //#include "simple_xmlss_utility_inline_functions.hpp"
 //#include "simple_xmlss_utility_error.hpp"
 //#include "simple_xmlss_utility_error_handler.hpp"
+//#include "simple_xmlss_api_cell_macro_functions.hpp"
 
 namespace simple_xmlss {
 
@@ -2471,12 +2556,11 @@ public:
   void simple_xmlss_set_string(model::cell& a_cell,
                            const std::string& a_string,
                            const utility::trace& a_trace) {
-    std::string argument_string = "string("+a_string+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_string_flag(a_cell, argument_string, a_trace);
-    check_number_flag(a_cell, argument_string, a_trace);
-    check_date_time_flag(a_cell, argument_string, a_trace);
-    check_formula_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG    (a_cell, ("string("+a_string+")"), a_trace);
+    CHECK_STRING_FLAG   (a_cell, ("string("+a_string+")"), a_trace);
+    CHECK_NUMBER_FLAG   (a_cell, ("string("+a_string+")"), a_trace);
+    CHECK_DATE_TIME_FLAG(a_cell, ("string("+a_string+")"), a_trace);
+    CHECK_FORMULA_FLAG  (a_cell, ("string("+a_string+")"), a_trace);
 
     model::cell_font_string new_font_string;
     new_font_string.contents = a_string;
@@ -2489,12 +2573,11 @@ public:
                            const std::string& a_string,
                            const unsigned int a_font_id,
                            const utility::trace& a_trace) {
-    std::string argument_string = "string("+a_string+"),font_id("+std::to_string(a_font_id)+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_string_flag(a_cell, argument_string, a_trace);
-    check_number_flag(a_cell, argument_string, a_trace);
-    check_date_time_flag(a_cell, argument_string, a_trace);
-    check_formula_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG    (a_cell, ("string("+a_string+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
+    CHECK_STRING_FLAG   (a_cell, ("string("+a_string+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
+    CHECK_NUMBER_FLAG   (a_cell, ("string("+a_string+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
+    CHECK_DATE_TIME_FLAG(a_cell, ("string("+a_string+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
+    CHECK_FORMULA_FLAG  (a_cell, ("string("+a_string+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
 
     model::cell_font_string new_font_string;
     new_font_string.contents = a_string;
@@ -2506,12 +2589,11 @@ public:
   void simple_xmlss_set_string(model::cell& a_cell,
                            const model::cell_string& a_string,
                            const utility::trace& a_trace) {
-    std::string argument_string = "cell_string("+ get_cell_string(a_string) + ")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_string_flag(a_cell, argument_string, a_trace);
-    check_number_flag(a_cell, argument_string, a_trace);
-    check_date_time_flag(a_cell, argument_string, a_trace);
-    check_formula_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG    (a_cell, ("cell_string("+ get_cell_string(a_string) + ")"), a_trace);
+    CHECK_STRING_FLAG   (a_cell, ("cell_string("+ get_cell_string(a_string) + ")"), a_trace);
+    CHECK_NUMBER_FLAG   (a_cell, ("cell_string("+ get_cell_string(a_string) + ")"), a_trace);
+    CHECK_DATE_TIME_FLAG(a_cell, ("cell_string("+ get_cell_string(a_string) + ")"), a_trace);
+    CHECK_FORMULA_FLAG  (a_cell, ("cell_string("+ get_cell_string(a_string) + ")"), a_trace);
 
     a_cell.string = a_string;
     a_cell.status_flag.string_flag = true;
@@ -2520,12 +2602,11 @@ public:
   void simple_xmlss_set_number(model::cell& a_cell,
                            const std::string& a_number,
                            const utility::trace& a_trace) {
-    std::string argument_string = "number("+a_number+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_string_flag(a_cell, argument_string, a_trace);
-    check_number_flag(a_cell, argument_string, a_trace);
-    check_date_time_flag(a_cell, argument_string, a_trace);
-    check_formula_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG    (a_cell, ("number("+a_number+")"), a_trace);
+    CHECK_STRING_FLAG   (a_cell, ("number("+a_number+")"), a_trace);
+    CHECK_NUMBER_FLAG   (a_cell, ("number("+a_number+")"), a_trace);
+    CHECK_DATE_TIME_FLAG(a_cell, ("number("+a_number+")"), a_trace);
+    CHECK_FORMULA_FLAG  (a_cell, ("number("+a_number+")"), a_trace);
 
     a_cell.number = a_number;
     a_cell.status_flag.number_flag = true;
@@ -2534,12 +2615,11 @@ public:
   void simple_xmlss_set_date_time(model::cell& a_cell,
                               const std::string& a_date_time,
                               const utility::trace& a_trace) {
-    std::string argument_string = "date_time("+a_date_time+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_string_flag(a_cell, argument_string, a_trace);
-    check_number_flag(a_cell, argument_string, a_trace);
-    check_date_time_flag(a_cell, argument_string, a_trace);
-    check_formula_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG    (a_cell, ("date_time("+a_date_time+")"), a_trace);
+    CHECK_STRING_FLAG   (a_cell, ("date_time("+a_date_time+")"), a_trace);
+    CHECK_NUMBER_FLAG   (a_cell, ("date_time("+a_date_time+")"), a_trace);
+    CHECK_DATE_TIME_FLAG(a_cell, ("date_time("+a_date_time+")"), a_trace);
+    CHECK_FORMULA_FLAG  (a_cell, ("date_time("+a_date_time+")"), a_trace);
 
     a_cell.date_time = a_date_time;
     a_cell.status_flag.date_time_flag = true;
@@ -2548,12 +2628,11 @@ public:
   void simple_xmlss_set_formula(model::cell& a_cell,
                             const std::string& a_formula,
                             const utility::trace& a_trace) {
-    std::string argument_string = "formula("+a_formula+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_string_flag(a_cell, argument_string, a_trace);
-    check_number_flag(a_cell, argument_string, a_trace);
-    check_date_time_flag(a_cell, argument_string, a_trace);
-    check_formula_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG    (a_cell, ("formula("+a_formula+")"), a_trace);
+    CHECK_STRING_FLAG   (a_cell, ("formula("+a_formula+")"), a_trace);
+    CHECK_NUMBER_FLAG   (a_cell, ("formula("+a_formula+")"), a_trace);
+    CHECK_DATE_TIME_FLAG(a_cell, ("formula("+a_formula+")"), a_trace);
+    CHECK_FORMULA_FLAG  (a_cell, ("formula("+a_formula+")"), a_trace);
 
     a_cell.formula = a_formula;
     a_cell.status_flag.formula_flag = true;
@@ -2562,10 +2641,8 @@ public:
   void simple_xmlss_set_comment(model::cell& a_cell,
                             const std::string& a_comment,
                             const utility::trace& a_trace) {
-    std::string argument_string = "comment("+a_comment+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_comment_flag(a_cell, argument_string, a_trace);
-    check_contents_exist(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG  (a_cell, ("comment("+a_comment+")"), a_trace);
+    CHECK_COMMENT_FLAG(a_cell, ("comment("+a_comment+")"), a_trace);
 
     model::cell_font_string new_font_string;
     new_font_string.contents = a_comment;
@@ -2578,10 +2655,8 @@ public:
                             const std::string& a_comment,
                             const unsigned int a_font_id,
                             const utility::trace& a_trace) {
-    std::string argument_string = "comment("+a_comment+"),font_id("+std::to_string(a_font_id)+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_comment_flag(a_cell, argument_string, a_trace);
-    check_contents_exist(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG  (a_cell, ("comment("+a_comment+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
+    CHECK_COMMENT_FLAG(a_cell, ("comment("+a_comment+"),font_id("+std::to_string(a_font_id)+")"), a_trace);
 
     model::cell_font_string new_font_string;
     new_font_string.contents = a_comment;
@@ -2593,16 +2668,8 @@ public:
   void simple_xmlss_set_comment(model::cell& a_cell,
                             const model::cell_comment& a_comment,
                             const utility::trace& a_trace) {
-    std::string argument_string = "comment(author:" + 
-                                  a_comment.author.contents + 
-                                  "<author_font_id:" + 
-                                  std::to_string(a_comment.author.font_id) + 
-                                  ">" + 
-                                  get_cell_string(a_comment.string) + 
-                                  ")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_comment_flag(a_cell, argument_string, a_trace);
-    check_contents_exist(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG  (a_cell, ("comment(author:"+a_comment.author.contents+"<author_font_id:"+std::to_string(a_comment.author.font_id)+">"+get_cell_string(a_comment.string)+")"), a_trace);
+    CHECK_COMMENT_FLAG(a_cell, ("comment(author:"+a_comment.author.contents+"<author_font_id:"+std::to_string(a_comment.author.font_id)+">"+get_cell_string(a_comment.string)+")"), a_trace);
 
     a_cell.comment = a_comment;
     a_cell.status_flag.comment_flag = true;
@@ -2624,9 +2691,8 @@ public:
   void simple_xmlss_set_hyperlink(model::cell& a_cell,
                               const std::string& a_hyper_link_url,
                               const utility::trace& a_trace) {
-    std::string argument_string = "hyperlink("+a_hyper_link_url+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
-    check_contents_exist(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG   (a_cell, ("hyperlink("+a_hyper_link_url+")"), a_trace);
+    CHECK_CONTENTS_EXIST(a_cell, ("hyperlink("+a_hyper_link_url+")"), a_trace);
 
     a_cell.hyperlink = a_hyper_link_url;
     a_cell.status_flag.hyperlink_flag = true;
@@ -2635,80 +2701,13 @@ public:
   void simple_xmlss_set_style_id(model::cell& a_cell,
                              const unsigned int a_style_id,
                              const utility::trace& a_trace) {
-    std::string argument_string = "style_id("+std::to_string(a_style_id)+")";
-    check_merge_flag(a_cell, argument_string, a_trace);
+    CHECK_MERGE_FLAG(a_cell, ("style_id("+std::to_string(a_style_id)+")"), a_trace);
 
     a_cell.style_id = a_style_id;
     a_cell.status_flag.style_flag = true;
   }
 
-private: 
-  void check_merge_flag(model::cell& a_cell,
-                        const std::string& a_discard_string,
-                        const utility::trace& a_trace) {
-    if(true == a_cell.configuration.merge_flag) {
-      std::string msg = "[ERROR] This is MERGED Cell. Discard: " + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
-  void check_string_flag(model::cell& a_cell,
-                         const std::string& a_discard_string,
-                         const utility::trace& a_trace) {
-    if(true == a_cell.status_flag.string_flag) {
-      std::string msg =  "[ERROR] This cell already has a STRING defined. Discard: " + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
-  void check_number_flag(model::cell& a_cell,
-                         const std::string& a_discard_string,
-                         const utility::trace& a_trace) {
-    if (true == a_cell.status_flag.number_flag) {
-      std::string msg = "[ERROR] This cell already has a NUMBER defined. Discard: " + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
-  void check_date_time_flag(model::cell& a_cell,
-                            const std::string& a_discard_string,
-                            const utility::trace& a_trace) {
-    if (true == a_cell.status_flag.date_time_flag) {
-      std::string msg = "[ERROR] This cell already has a DATE_TIME defined. Discard: " + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
-  void check_formula_flag(model::cell& a_cell,
-                          const std::string& a_discard_string,
-                          const utility::trace& a_trace) {
-    if (true == a_cell.status_flag.formula_flag) {
-      std::string msg = "[ERROR] This cell already has a FORMULA defined. Discard: " + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
-  void check_comment_flag(model::cell& a_cell,
-                          const std::string& a_discard_string,
-                          const utility::trace& a_trace) {
-    if(true == a_cell.status_flag.comment_flag) {
-      std::string msg = "[ERROR] This cell already has a COMMENT defined. Discard: " + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
-  void check_contents_exist(model::cell& a_cell,
-                            const std::string& a_discard_string,
-                            const utility::trace& a_trace) {
-    if(false == a_cell.status_flag.string_flag &&
-       false == a_cell.status_flag.number_flag &&
-       false == a_cell.status_flag.date_time_flag &&
-       false == a_cell.status_flag.formula_flag) {
-      std::string msg = "[ERROR] STRING, NUMBER, DATE_TIME and FORMULA are not defined together. Discard:" + a_discard_string;
-      handling_error(a_cell,msg,a_trace);
-    }
-  }
-
+private:
   std::string get_cell_string(const model::cell_string& a_string) {
     std::string return_value;
     for(auto& iter: a_string) {
@@ -5044,3 +5043,5 @@ private:
 } // namespace simple_xmlss
 
 #endif /* SIMPLE_XMLSS_BOOK_HPP */
+
+

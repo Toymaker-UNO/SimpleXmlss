@@ -1,6 +1,6 @@
 #!/bin/bash
-MERGE_FILE_NAME="./simple_xmlss.hpp"
-#MERGE_FILE_NAME="../release/simple_xmlss.hpp"
+#MERGE_FILE_NAME="./simple_xmlss.hpp"
+MERGE_FILE_NAME="../release/simple_xmlss.hpp"
 
 rm -rf $MERGE_FILE_NAME
 
@@ -68,6 +68,7 @@ merge_wo_include ../development/simple_xmlss_model_cell_comment.hpp             
 merge_wo_include ../development/simple_xmlss_model_cell_configuration.hpp            #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_model_cell.hpp                          #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_writer_cell.hpp                         #DEPENDENCY_RESOLVED
+merge_wo_include ../development/simple_xmlss_api_cell_macro_functions.hpp            #BASIC
 merge_wo_include ../development/simple_xmlss_api_cell.hpp                            #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_cell.hpp                                #DEPENDENCY_RESOLVED
 
