@@ -8,7 +8,7 @@ namespace simple_xmlss {
 
 namespace model {
 
-typedef std::map<const std::string, simple_xmlss::sheet> book_sheet_map;
+typedef std::map<const unsigned int, simple_xmlss::sheet> book_sheet_map;
 
 } // namespace model
 

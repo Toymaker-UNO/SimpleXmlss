@@ -11,17 +11,23 @@ class book {
 public:
   simple_xmlss::sheet& simple_xmlss_get_sheet(model::book& a_book,
                                       const std::string& a_sheet_name) {
-    auto iter = a_book.sheet_map.find(a_sheet_name);
-    if(a_book.sheet_map.end() != iter) {
-      return iter->second;
+    auto iter_index = a_book.sheet_index_map.find(a_sheet_name);
+    if(a_book.sheet_index_map.end() != iter_index) {
+      auto iter_sheet = a_book.sheet_map.find(iter_index->second);
+      if(a_book.sheet_map.end() != iter_sheet) {
+        return iter_sheet->second;
+      }
     }
 
+    unsigned int index = a_book.sheet_index_map.size();
     model::sheet_configuration new_sheet_configuration(a_book.book_name,
                                                        a_sheet_name);
     simple_xmlss::sheet new_sheet(new_sheet_configuration);
-    a_book.sheet_map.insert(std::make_pair(a_sheet_name,
+    a_book.sheet_map.insert(std::make_pair(index,
                                            new_sheet));
-    return a_book.sheet_map.find(a_sheet_name)->second;
+    a_book.sheet_index_map.insert(std::make_pair(a_sheet_name,
+                                           index));
+    return a_book.sheet_map.find(index)->second;
   }
 
   simple_xmlss::cell& simple_xmlss_set_string(model::book& a_book,

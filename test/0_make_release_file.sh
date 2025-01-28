@@ -85,6 +85,7 @@ merge_wo_include ../development/simple_xmlss_writer_sheet.hpp                   
 merge_wo_include ../development/simple_xmlss_api_sheet.hpp                           #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_sheet.hpp                               #DEPENDENCY_RESOLVED
 
+merge_wo_include ../development/simple_xmlss_model_book_sheet_index_map.hpp          #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_model_book_sheet_map.hpp                #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_model_book.hpp                          #DEPENDENCY_RESOLVED
 merge_wo_include ../development/simple_xmlss_writer_book.hpp                         #DEPENDENCY_RESOLVED
