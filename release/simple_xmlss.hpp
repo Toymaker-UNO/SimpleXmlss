@@ -4217,24 +4217,6 @@ private:
 #endif /* SIMPLE_XMLSS_SHEET_HPP */
 
 
-#ifndef SIMPLE_XMLSS_MODEL_BOOK_SHEET_INDEX_MAP_HPP
-#define SIMPLE_XMLSS_MODEL_BOOK_SHEET_INDEX_MAP_HPP
-
-//#include "simple_xmlss_dependency.hpp"
-
-namespace simple_xmlss {
-
-namespace model {
-
-typedef std::map<const std::string, const unsigned int> book_sheet_index_map;
-
-} // namespace model
-
-} // namespace simple_xmlss
-
-#endif /* SIMPLE_XMLSS_BOOK_SHEET_INDEX_MAP_HPP */
-
-
 #ifndef SIMPLE_XMLSS_MODEL_BOOK_SHEET_MAP_HPP
 #define SIMPLE_XMLSS_MODEL_BOOK_SHEET_MAP_HPP
 
@@ -4245,7 +4227,7 @@ namespace simple_xmlss {
 
 namespace model {
 
-typedef std::map<const unsigned int, simple_xmlss::sheet> book_sheet_map;
+typedef std::map<const std::string, simple_xmlss::sheet> book_sheet_map;
 
 } // namespace model
 
@@ -4258,7 +4240,6 @@ typedef std::map<const unsigned int, simple_xmlss::sheet> book_sheet_map;
 #define SIMPLE_XMLSS_MODEL_BOOK_HPP
 
 //#include "simple_xmlss_model_book_sheet_map.hpp"
-//#include "simple_xmlss_model_book_sheet_index_map.hpp"
 
 namespace simple_xmlss {
 
@@ -4268,7 +4249,7 @@ class book {
 public:
   const std::string book_name;
   book_sheet_map sheet_map;
-  book_sheet_index_map sheet_index_map;
+  std::list<std::string>  sheet_order;
 
   book(const std::string& a_book_name)
     : book_name(a_book_name) {}
@@ -4364,8 +4345,12 @@ void print_xmlss_node_styles(FILE* a_file) {
 
 void print_xmlss_node_worksheet(model::book& a_book,
                                 FILE* a_file) {
-  for (auto &ws_iter : a_book.sheet_map) {
-    ws_iter.second.print_xmlss(a_file);
+  for(auto& iter_sheet_name : a_book.sheet_order) {
+    auto iter_sheet = a_book.sheet_map.find(iter_sheet_name);
+    if(a_book.sheet_map.end() == iter_sheet) {
+      continue;
+    }
+    iter_sheet->second.print_xmlss(a_file);
   }
 }
 
@@ -4391,23 +4376,18 @@ class book {
 public:
   simple_xmlss::sheet& simple_xmlss_get_sheet(model::book& a_book,
                                       const std::string& a_sheet_name) {
-    auto iter_index = a_book.sheet_index_map.find(a_sheet_name);
-    if(a_book.sheet_index_map.end() != iter_index) {
-      auto iter_sheet = a_book.sheet_map.find(iter_index->second);
-      if(a_book.sheet_map.end() != iter_sheet) {
-        return iter_sheet->second;
-      }
+    auto iter = a_book.sheet_map.find(a_sheet_name);
+    if(a_book.sheet_map.end() != iter) {
+      return iter->second;
     }
 
-    unsigned int index = a_book.sheet_index_map.size();
     model::sheet_configuration new_sheet_configuration(a_book.book_name,
                                                        a_sheet_name);
     simple_xmlss::sheet new_sheet(new_sheet_configuration);
-    a_book.sheet_map.insert(std::make_pair(index,
+    a_book.sheet_map.insert(std::make_pair(a_sheet_name,
                                            new_sheet));
-    a_book.sheet_index_map.insert(std::make_pair(a_sheet_name,
-                                           index));
-    return a_book.sheet_map.find(index)->second;
+    a_book.sheet_order.push_back(a_sheet_name);
+    return a_book.sheet_map.find(a_sheet_name)->second;
   }
 
   simple_xmlss::cell& simple_xmlss_set_string(model::book& a_book,

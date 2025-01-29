@@ -81,8 +81,12 @@ void print_xmlss_node_styles(FILE* a_file) {
 
 void print_xmlss_node_worksheet(model::book& a_book,
                                 FILE* a_file) {
-  for (auto &ws_iter : a_book.sheet_map) {
-    ws_iter.second.print_xmlss(a_file);
+  for(auto& iter_sheet_name : a_book.sheet_order) {
+    auto iter_sheet = a_book.sheet_map.find(iter_sheet_name);
+    if(a_book.sheet_map.end() == iter_sheet) {
+      continue;
+    }
+    iter_sheet->second.print_xmlss(a_file);
   }
 }
 
