@@ -4249,6 +4249,7 @@ class book {
 public:
   const std::string book_name;
   book_sheet_map sheet_map;
+  std::list<std::string>  sheet_order;
 
   book(const std::string& a_book_name)
     : book_name(a_book_name) {}
@@ -4344,8 +4345,12 @@ void print_xmlss_node_styles(FILE* a_file) {
 
 void print_xmlss_node_worksheet(model::book& a_book,
                                 FILE* a_file) {
-  for (auto &ws_iter : a_book.sheet_map) {
-    ws_iter.second.print_xmlss(a_file);
+  for(auto& iter_sheet_name : a_book.sheet_order) {
+    auto iter_sheet = a_book.sheet_map.find(iter_sheet_name);
+    if(a_book.sheet_map.end() == iter_sheet) {
+      continue;
+    }
+    iter_sheet->second.print_xmlss(a_file);
   }
 }
 
@@ -4381,6 +4386,7 @@ public:
     simple_xmlss::sheet new_sheet(new_sheet_configuration);
     a_book.sheet_map.insert(std::make_pair(a_sheet_name,
                                            new_sheet));
+    a_book.sheet_order.push_back(a_sheet_name);
     return a_book.sheet_map.find(a_sheet_name)->second;
   }
 
