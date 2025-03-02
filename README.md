@@ -627,9 +627,9 @@ sheet 의 특정 row 에 대한 높이를 지정한다.
 ### 5.11.2 Function declaration
 ```cpp
 sheet& book::set_row_height(const unsigned int a_row,
-                                                  const float a_height,
-                                                  const std::string& a_sheet_name,
-                                                  const utility::trace& a_trace = utility::trace());
+                            const float a_height,
+                            const std::string& a_sheet_name,
+                            const utility::trace& a_trace = utility::trace());
 
 sheet& sheet::set_row_height(const unsigned int a_row,
                              const float a_height,

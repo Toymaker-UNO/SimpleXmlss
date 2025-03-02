@@ -9,8 +9,6 @@ namespace simple_xmlss {
 class test_0209_cell_set_comment : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
     unsigned int font_id1 = builder::font::instance().
                             clear().
                             set_color("#FF0000").

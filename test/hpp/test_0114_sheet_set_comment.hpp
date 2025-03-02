@@ -8,10 +8,7 @@ namespace simple_xmlss {
 
 class test_0114_sheet_set_comment : public abstract_test_case {
 public:
-  std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-    
+  std::string run(void) {    
     simple_xmlss::book new_book("new_book");
     simple_xmlss::sheet& new_sheet1 = new_book.get_sheet("Sheet No 1");
 

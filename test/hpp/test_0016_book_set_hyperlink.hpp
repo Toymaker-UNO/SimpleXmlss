@@ -8,10 +8,7 @@ namespace simple_xmlss {
 
 class test_0016_book_set_hyperlink : public abstract_test_case {
 public:
-  std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-    
+  std::string run(void) {    
     simple_xmlss::book new_book("new_book");
 
     new_book.set_string("A1 Data", "Sheet No 1", 1, 1);

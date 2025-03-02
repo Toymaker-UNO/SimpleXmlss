@@ -16,10 +16,6 @@ public:
     return singleton_instance;
   }
 
-  void initialize(void) {
-    m_api.initialize(m_model);
-  }
-
   const model::font& get_font(const unsigned int a_font_id) {
     return m_api.get_font(m_model, a_font_id);
   }
@@ -90,6 +86,10 @@ public:
 private:
   font(void) {
     initialize();
+  }
+
+  void initialize(void) {
+    m_api.initialize(m_model);
   }
 
   model::font_map m_model;

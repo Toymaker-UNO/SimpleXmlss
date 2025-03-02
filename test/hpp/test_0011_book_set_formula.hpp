@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0011_book_set_formula : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     simple_xmlss::book new_book("new_book");
     new_book.set_number("12345",  "Sheet No 1",  1, 1);
     new_book.set_number("56789",  "Sheet No 1",  1, 2);

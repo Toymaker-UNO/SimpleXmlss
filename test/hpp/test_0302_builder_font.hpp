@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0302_builder_font : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     unsigned int font_gullim = builder::font::instance().
                                clear().
                                set_name("굴림체").

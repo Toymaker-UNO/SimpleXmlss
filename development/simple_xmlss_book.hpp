@@ -14,7 +14,12 @@ namespace simple_xmlss {
 class book {
 public:
   book(const std::string& a_book_name = "DefaultBookName")
-    : m_model(a_book_name) {}
+    : m_model(a_book_name) {
+      builder::comment::instance();
+      builder::font::instance();
+      builder::string::instance();
+      builder::style::instance();
+    }
 
   sheet& get_sheet(const std::string& a_sheet_name) {
     return m_api.simple_xmlss_get_sheet(m_model,

@@ -16,10 +16,6 @@ public:
     return singleton_instance;
   }
 
-  void initialize(void) {
-    m_api.initialize(m_model);
-  }
-
   unsigned int build(void) {
     return m_api.build(m_model);
   }
@@ -126,6 +122,10 @@ void print_xmlss(FILE* a_file) {
 private:
   style(void) {
     initialize();
+  }
+
+  void initialize(void) {
+    m_api.initialize(m_model);
   }
 
   model::style_map m_model;

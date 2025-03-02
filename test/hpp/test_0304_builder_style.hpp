@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0304_builder_style : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     simple_xmlss::book new_book("new_book");
     unsigned int style_01 = builder::style::instance().
                              clear().

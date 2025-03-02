@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0212_cell_set_style_id : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     unsigned int style_id = simple_xmlss::builder::style::instance().
                                 set_fill_background_color("#00FF00").
                                 set_fill_pattern_style(model::STYLE_FILL_PATTERN::SOLID).

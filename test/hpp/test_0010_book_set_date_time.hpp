@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0010_book_set_date_time : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     unsigned int new_style_id1 = builder::style::instance().
                                    set_number_format("Short Date").
                                    build();

@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0020_book_set_col_width : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     simple_xmlss::book new_book("new_book");
     new_book.set_col_width(2,130,"Sheet No 1");
     new_book.set_col_width(3,130,"Sheet No 1");

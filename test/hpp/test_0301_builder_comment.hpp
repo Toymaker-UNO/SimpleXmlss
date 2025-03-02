@@ -8,10 +8,7 @@ namespace simple_xmlss {
 
 class test_0301_builder_comment : public abstract_test_case {
 public:
-  std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-    
+  std::string run(void) {    
     simple_xmlss::book new_book("new_book");
     unsigned int font_id1 = builder::font::instance().
                             clear().

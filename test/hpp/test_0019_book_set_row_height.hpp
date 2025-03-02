@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0019_book_set_row_height : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     simple_xmlss::book new_book("new_book");
     new_book.set_row_height(2,60,"Sheet No 1");
     new_book.set_row_height(3,60,"Sheet No 1");

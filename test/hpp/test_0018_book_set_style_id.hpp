@@ -9,9 +9,6 @@ namespace simple_xmlss {
 class test_0018_book_set_style_id : public abstract_test_case {
 public:
   std::string run(void) {
-    simple_xmlss::builder::style::instance().initialize();
-    simple_xmlss::builder::font::instance().initialize();
-
     simple_xmlss::book new_book("new_book");
     unsigned int style_id = simple_xmlss::builder::style::instance().
                                 set_fill_background_color("#00FF00").

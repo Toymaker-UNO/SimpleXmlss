@@ -21,6 +21,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
 ****************************************************************************************************
 ***************************************************************************************************/
 #ifndef SIMPLE_XMLSS_DEPENDENCY_HPP
@@ -734,10 +735,6 @@ public:
     return singleton_instance;
   }
 
-  void initialize(void) {
-    m_api.initialize(m_model);
-  }
-
   const model::font& get_font(const unsigned int a_font_id) {
     return m_api.get_font(m_model, a_font_id);
   }
@@ -808,6 +805,10 @@ public:
 private:
   font(void) {
     initialize();
+  }
+
+  void initialize(void) {
+    m_api.initialize(m_model);
   }
 
   model::font_map m_model;
@@ -1805,10 +1806,6 @@ public:
     return singleton_instance;
   }
 
-  void initialize(void) {
-    m_api.initialize(m_model);
-  }
-
   unsigned int build(void) {
     return m_api.build(m_model);
   }
@@ -1915,6 +1912,10 @@ void print_xmlss(FILE* a_file) {
 private:
   style(void) {
     initialize();
+  }
+
+  void initialize(void) {
+    m_api.initialize(m_model);
   }
 
   model::style_map m_model;
@@ -4724,7 +4725,12 @@ namespace simple_xmlss {
 class book {
 public:
   book(const std::string& a_book_name = "DefaultBookName")
-    : m_model(a_book_name) {}
+    : m_model(a_book_name) {
+      builder::comment::instance();
+      builder::font::instance();
+      builder::string::instance();
+      builder::style::instance();
+    }
 
   sheet& get_sheet(const std::string& a_sheet_name) {
     return m_api.simple_xmlss_get_sheet(m_model,
