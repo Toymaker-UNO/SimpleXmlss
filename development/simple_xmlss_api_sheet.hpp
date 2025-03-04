@@ -9,6 +9,11 @@ namespace api {
 
 class sheet {
 public:
+  void set_tab_color(model::sheet& a_sheet,
+                     const model::SHEET_TAB_COLOR a_sheet_tab_color) {
+    a_sheet.tab_color = a_sheet_tab_color;
+  }
+
   simple_xmlss::cell& simple_xmlss_get_cell(model::sheet& a_sheet,
                                     const unsigned int a_col,
                                     const unsigned int a_row,

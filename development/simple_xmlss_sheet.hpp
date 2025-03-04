@@ -12,6 +12,11 @@ public:
   sheet(const model::sheet_configuration& a_sheet_configuration)
     : m_model(a_sheet_configuration) {}
 
+  void set_tab_color(const model::SHEET_TAB_COLOR a_sheet_tab_color) {
+    m_api.set_tab_color(m_model,
+                        a_sheet_tab_color);
+  }
+
   cell& get_cell(const unsigned int a_col,
                  const unsigned int a_row,
                  const utility::trace& a_trace = utility::trace()) {
