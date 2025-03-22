@@ -294,6 +294,23 @@ public:
                                        a_trace);
   }
 
+  void set_style_id(const unsigned int a_style_id,
+                    const std::string& a_sheet_name,
+                    const unsigned int a_col_begin,
+                    const unsigned int a_row_begin,
+                    const unsigned int a_col_end,
+                    const unsigned int a_row_end,
+                    const utility::trace& a_trace = utility::trace()) {
+    return m_api.simple_xmlss_set_style_id(m_model,
+                                        a_style_id,
+                                        a_sheet_name,
+                                        a_col_begin,
+                                        a_row_begin,
+                                        a_col_end,
+                                        a_row_end,
+                                        a_trace);
+  }
+
   sheet& set_row_height(const unsigned int a_row,
                         const float a_height,
                         const std::string& a_sheet_name,
