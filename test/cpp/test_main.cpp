@@ -20,6 +20,7 @@
 #include "test_0019_book_set_row_height.hpp"
 #include "test_0020_book_set_col_width.hpp"
 #include "test_0021_book_set_string.hpp"
+#include "test_0022_book_set_style_id.hpp"
 #include "test_0101_sheet_set_string.hpp"
 #include "test_0102_sheet_set_string.hpp"
 #include "test_0103_sheet_set_string.hpp"
@@ -41,6 +42,7 @@
 #include "test_0119_sheet_set_row_height.hpp"
 #include "test_0120_sheet_set_col_width.hpp"
 #include "test_0121_sheet_set_tab_color.hpp"
+#include "test_0122_sheet_set_style_id.hpp"
 #include "test_0201_cell_set_string.hpp"
 #include "test_0202_cell_set_string.hpp"
 #include "test_0203_cell_set_string.hpp"
@@ -81,6 +83,7 @@ int main(void) {
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0019_book_set_row_height>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0020_book_set_col_width>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0021_book_set_string>();
+  simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0022_book_set_style_id>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0101_sheet_set_string>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0102_sheet_set_string>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0103_sheet_set_string>();
@@ -101,7 +104,8 @@ int main(void) {
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0118_sheet_set_style_id>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0119_sheet_set_row_height>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0120_sheet_set_col_width>();
-  simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0121_sheet_set_tab_color>();
+  simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0121_sheet_set_tab_color>(); 
+  simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0122_sheet_set_style_id>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0201_cell_set_string>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0202_cell_set_string>();
   simple_xmlss::test::instance().register_test_case<simple_xmlss::test_0203_cell_set_string>();
