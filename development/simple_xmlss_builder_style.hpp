@@ -119,13 +119,13 @@ void print_xmlss(FILE* a_file) {
   m_writer.print_xmlss(m_model, a_file);
 }
 
+void initialize(void) {
+  m_api.initialize(m_model);
+}
+
 private:
   style(void) {
     initialize();
-  }
-
-  void initialize(void) {
-    m_api.initialize(m_model);
   }
 
   model::style_map m_model;
