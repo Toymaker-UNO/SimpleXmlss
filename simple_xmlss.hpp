@@ -3644,6 +3644,30 @@ public:
                              a_trace);
   }
 
+  unsigned int simple_xmlss_set_style_id(model::sheet& a_sheet,
+                                 const unsigned int a_style_id,
+                                 const unsigned int a_col_begin,
+                                 const unsigned int a_row_begin,
+                                 const unsigned int a_col_end,
+                                 const unsigned int a_row_end,
+                                 const utility::trace& a_trace) {
+    unsigned int return_value = 0;
+    for(unsigned int iter_row = a_row_begin; iter_row <= a_row_end; iter_row++) {
+      for(unsigned int iter_col = a_col_begin; iter_col <= a_col_end; iter_col++) {
+        if(false == is_exist_cell(a_sheet,iter_col,iter_row)) {
+          continue;
+        }
+        simple_xmlss::cell& current_cell = simple_xmlss_get_cell(a_sheet,iter_col,iter_row,a_trace);
+        if(true == current_cell.get_configuration().merge_flag) {
+          continue;
+        }
+        current_cell.set_style_id(a_style_id,a_trace);
+        return_value++;
+      }
+    }
+    return return_value;
+  }
+
   void simple_xmlss_set_row_height(model::sheet& a_sheet,
                                const unsigned int a_row,
                                const float a_height,
@@ -3659,8 +3683,22 @@ public:
     check_set_col_width(a_sheet,a_col,a_width,a_trace);
     a_sheet.col_width_map[a_col] = a_width;
   }
-
+    
 private:
+  bool is_exist_cell(model::sheet& a_sheet,
+                     const unsigned int a_col,
+                     const unsigned int a_row) {
+    auto iter_row = a_sheet.cell_map.find(a_row);
+    if(a_sheet.cell_map.end() == iter_row) {
+      return false;
+    }
+    auto iter_col = iter_row->second.find(a_col);
+    if(iter_row->second.end() == iter_col) {
+      return false;
+    }
+    return true;
+  }
+
   simple_xmlss::cell& get_cell_reference(model::sheet& a_sheet,
                                      const unsigned int a_col,
                                      const unsigned int a_row,
@@ -4192,6 +4230,21 @@ public:
                                        a_trace);
   }
 
+  unsigned int set_style_id(const unsigned int a_style_id,
+                    const unsigned int a_col_begin,
+                    const unsigned int a_row_begin,
+                    const unsigned int a_col_end,
+                    const unsigned int a_row_end,
+                    const utility::trace& a_trace = utility::trace()) {
+    return m_api.simple_xmlss_set_style_id(m_model,
+                                        a_style_id,
+                                        a_col_begin,
+                                        a_row_begin,
+                                        a_col_end,
+                                        a_row_end,
+                                        a_trace);
+  }
+
   sheet& set_row_height(const unsigned int a_row,
                        const float a_height,
                        const utility::trace& a_trace = utility::trace()) {
@@ -4687,6 +4740,24 @@ public:
                               a_trace);
   }
 
+  unsigned int simple_xmlss_set_style_id(model::book& a_book,
+                                 const unsigned int a_style_id,
+                                 const std::string& a_sheet_name,
+                                 const unsigned int a_col_begin,
+                                 const unsigned int a_row_begin,
+                                 const unsigned int a_col_end,
+                                 const unsigned int a_row_end,
+                                 const utility::trace& a_trace) {
+    return simple_xmlss_get_sheet(a_book,
+                              a_sheet_name).
+                 set_style_id(a_style_id,
+                              a_col_begin,
+                              a_row_begin,
+                              a_col_end,
+                              a_row_end,
+                              a_trace);
+  }
+
   simple_xmlss::sheet& simple_xmlss_set_row_height(model::book& a_book,
                                            const unsigned int a_row,
                                            const float a_height,
@@ -5013,6 +5084,23 @@ public:
                                        a_col,
                                        a_row,
                                        a_trace);
+  }
+
+  unsigned int set_style_id(const unsigned int a_style_id,
+                    const std::string& a_sheet_name,
+                    const unsigned int a_col_begin,
+                    const unsigned int a_row_begin,
+                    const unsigned int a_col_end,
+                    const unsigned int a_row_end,
+                    const utility::trace& a_trace = utility::trace()) {
+    return m_api.simple_xmlss_set_style_id(m_model,
+                                        a_style_id,
+                                        a_sheet_name,
+                                        a_col_begin,
+                                        a_row_begin,
+                                        a_col_end,
+                                        a_row_end,
+                                        a_trace);
   }
 
   sheet& set_row_height(const unsigned int a_row,

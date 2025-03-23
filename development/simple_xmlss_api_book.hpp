@@ -311,7 +311,7 @@ public:
                               a_trace);
   }
 
-  void simple_xmlss_set_style_id(model::book& a_book,
+  unsigned int simple_xmlss_set_style_id(model::book& a_book,
                                  const unsigned int a_style_id,
                                  const std::string& a_sheet_name,
                                  const unsigned int a_col_begin,
@@ -319,8 +319,8 @@ public:
                                  const unsigned int a_col_end,
                                  const unsigned int a_row_end,
                                  const utility::trace& a_trace) {
-    simple_xmlss_get_sheet(a_book,
-                           a_sheet_name).
+    return simple_xmlss_get_sheet(a_book,
+                              a_sheet_name).
                  set_style_id(a_style_id,
                               a_col_begin,
                               a_row_begin,

@@ -294,7 +294,7 @@ public:
                                        a_trace);
   }
 
-  void set_style_id(const unsigned int a_style_id,
+  unsigned int set_style_id(const unsigned int a_style_id,
                     const std::string& a_sheet_name,
                     const unsigned int a_col_begin,
                     const unsigned int a_row_begin,

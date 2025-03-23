@@ -308,13 +308,14 @@ public:
                              a_trace);
   }
 
-  void simple_xmlss_set_style_id(model::sheet& a_sheet,
+  unsigned int simple_xmlss_set_style_id(model::sheet& a_sheet,
                                  const unsigned int a_style_id,
                                  const unsigned int a_col_begin,
                                  const unsigned int a_row_begin,
                                  const unsigned int a_col_end,
                                  const unsigned int a_row_end,
                                  const utility::trace& a_trace) {
+    unsigned int return_value = 0;
     for(unsigned int iter_row = a_row_begin; iter_row <= a_row_end; iter_row++) {
       for(unsigned int iter_col = a_col_begin; iter_col <= a_col_end; iter_col++) {
         if(false == is_exist_cell(a_sheet,iter_col,iter_row)) {
@@ -325,8 +326,10 @@ public:
           continue;
         }
         current_cell.set_style_id(a_style_id,a_trace);
+        return_value++;
       }
     }
+    return return_value;
   }
 
   void simple_xmlss_set_row_height(model::sheet& a_sheet,
