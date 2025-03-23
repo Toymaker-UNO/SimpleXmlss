@@ -139,104 +139,6 @@
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
   </Style>
-  <Style ss:ID="s18_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s19_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s20_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s21_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s22_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s23_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s24_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s25_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s26_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s27_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s28_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s29_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s30_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s31_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s32_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
  </Styles>
  <Worksheet ss:Name="Sheet No 1">
   <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="10" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5">
@@ -244,34 +146,34 @@
     <Cell ss:Index="1"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
    </Row>
    <Row ss:Index="2">
-    <Cell ss:Index="2" ss:StyleID="s26_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s11_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
    </Row>
    <Row ss:Index="3">
-    <Cell ss:Index="3" ss:StyleID="s26_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s11_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
    </Row>
    <Row ss:Index="4">
-    <Cell ss:Index="4" ss:StyleID="s27_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s12_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
    </Row>
    <Row ss:Index="5">
-    <Cell ss:Index="5" ss:StyleID="s27_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s12_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
    </Row>
    <Row ss:Index="6">
-    <Cell ss:Index="6" ss:StyleID="s28_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s13_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
    </Row>
    <Row ss:Index="7">
-    <Cell ss:Index="2" ss:StyleID="s30_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
-    <Cell ss:Index="7" ss:StyleID="s28_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s15_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s13_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
    </Row>
    <Row ss:Index="8">
-    <Cell ss:Index="3" ss:StyleID="s30_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
-    <Cell ss:Index="8" ss:StyleID="s29_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s15_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s14_sty"><Data ss:Type="DateTime">2024-10-03T20:34:12.123</Data></Cell>
    </Row>
    <Row ss:Index="9">
-    <Cell ss:Index="4" ss:StyleID="s31_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
-    <Cell ss:Index="9" ss:StyleID="s29_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s16_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s14_sty"><Data ss:Type="DateTime">2024-10-03T08:08:08.020</Data></Cell>
    </Row>
    <Row ss:Index="10">
-    <Cell ss:Index="5" ss:StyleID="s32_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s17_sty"><Data ss:Type="DateTime">1982-02-09T00:00:00.000</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

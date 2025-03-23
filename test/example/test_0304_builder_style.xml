@@ -101,533 +101,271 @@
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="Short Date"/>
+   <NumberFormat ss:Format="_-&quot;₩&quot;* #,##0.000_-;\-&quot;₩&quot;* #,##0.000_-;_-&quot;₩&quot;* &quot;-&quot;???_-;_-@_-"/>
   </Style>
   <Style ss:ID="s12_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
+   <NumberFormat ss:Format="Percent"/>
   </Style>
   <Style ss:ID="s13_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
+   <NumberFormat ss:Format="[&lt;=999999]####\-####;\(0##\)\ ####\-####"/>
   </Style>
-  <Style ss:ID="s14_sty">
+  <Style ss:ID="s14_sty" ss:Parent="s_num_comma">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
   </Style>
   <Style ss:ID="s15_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Center"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
   </Style>
   <Style ss:ID="s16_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Left"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
   </Style>
   <Style ss:ID="s17_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Right"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
   </Style>
   <Style ss:ID="s18_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="CenterAcrossSelection"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="Short Date"/>
   </Style>
   <Style ss:ID="s19_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Distributed"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
   </Style>
   <Style ss:ID="s20_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Fill"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
   </Style>
   <Style ss:ID="s21_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Justify"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
   </Style>
   <Style ss:ID="s22_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Center"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
   </Style>
   <Style ss:ID="s23_sty">
-   <Alignment/>
+   <Alignment ss:Horizontal="Left" ss:Indent="1"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
   </Style>
   <Style ss:ID="s24_sty">
+   <Alignment ss:Horizontal="Right" ss:Indent="1"/>
+   <Borders/>
+   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s25_sty">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s26_sty">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s27_sty">
+   <Alignment ss:Vertical="Distributed"/>
+   <Borders/>
+   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s28_sty">
+   <Alignment ss:Vertical="Justify"/>
+   <Borders/>
+   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s29_sty">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s30_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s25_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s26_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s27_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s28_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s29_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s30_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
   </Style>
   <Style ss:ID="s31_sty">
-   <Alignment ss:WrapText="1"/>
+   <Alignment ss:ShrinkToFit="1"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
   </Style>
   <Style ss:ID="s32_sty">
    <Alignment ss:WrapText="1"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
   </Style>
   <Style ss:ID="s33_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s34_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s35_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s36_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s37_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s38_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s39_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s40_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s41_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s42_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s43_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s44_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s45_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s46_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s47_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s48_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s49_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="12" ss:Color="#555500" ss:Underline="SingleAccounting"/>
-  </Style>
-  <Style ss:ID="s50_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="12" ss:Color="#555500" ss:Underline="DoubleAccounting"/>
-  </Style>
-  <Style ss:ID="s51_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="_-&quot;₩&quot;* #,##0.000_-;\-&quot;₩&quot;* #,##0.000_-;_-&quot;₩&quot;* &quot;-&quot;???_-;_-@_-"/>
-  </Style>
-  <Style ss:ID="s52_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="Percent"/>
-  </Style>
-  <Style ss:ID="s53_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="[&lt;=999999]####\-####;\(0##\)\ ####\-####"/>
-  </Style>
-  <Style ss:ID="s54_sty" ss:Parent="s_num_comma">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s55_sty">
-   <Alignment ss:Horizontal="Center"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s56_sty">
-   <Alignment ss:Horizontal="Left"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s57_sty">
-   <Alignment ss:Horizontal="Right"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s58_sty">
-   <Alignment ss:Horizontal="CenterAcrossSelection"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s59_sty">
-   <Alignment ss:Horizontal="Distributed"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s60_sty">
-   <Alignment ss:Horizontal="Fill"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s61_sty">
-   <Alignment ss:Horizontal="Justify"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s62_sty">
-   <Alignment ss:Horizontal="Center"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s63_sty">
-   <Alignment ss:Horizontal="Left" ss:Indent="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s64_sty">
-   <Alignment ss:Horizontal="Right" ss:Indent="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s65_sty">
-   <Alignment ss:Vertical="Center"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s66_sty">
-   <Alignment ss:Vertical="Bottom"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s67_sty">
-   <Alignment ss:Vertical="Distributed"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s68_sty">
-   <Alignment ss:Vertical="Justify"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s69_sty">
-   <Alignment ss:Vertical="Top"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s70_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s71_sty">
-   <Alignment ss:ShrinkToFit="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s72_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s73_sty">
    <Alignment ss:Rotate="20"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s74_sty">
+  <Style ss:ID="s34_sty">
    <Alignment ss:Rotate="45"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s75_sty">
+  <Style ss:ID="s35_sty">
    <Alignment ss:Rotate="75"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s76_sty">
+  <Style ss:ID="s36_sty">
    <Alignment ss:Rotate="90"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s77_sty">
+  <Style ss:ID="s37_sty">
    <Alignment ss:Rotate="-45"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s78_sty">
+  <Style ss:ID="s38_sty">
    <Alignment ss:Rotate="-90"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s79_sty">
+  <Style ss:ID="s39_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="14" ss:Color="#AAAAAA"  ss:Bold="1"  ss:Italic="1"  ss:StrikeThrough="1"/>
   </Style>
-  <Style ss:ID="s80_sty">
+  <Style ss:ID="s40_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s81_sty">
+  <Style ss:ID="s41_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Bottom" ss:Color="#FF0000" ss:LineStyle="Continuous" ss:Weight="1"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s82_sty">
+  <Style ss:ID="s42_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Left" ss:Color="#FF0000" ss:LineStyle="Dash" ss:Weight="0"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s83_sty">
+  <Style ss:ID="s43_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Top" ss:Color="#FF0000" ss:LineStyle="DashDot" ss:Weight="3"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s84_sty">
+  <Style ss:ID="s44_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Right" ss:Color="#FF0000" ss:LineStyle="DashDotDot" ss:Weight="2"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s85_sty">
+  <Style ss:ID="s45_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Top" ss:Color="#FF0000" ss:LineStyle="Dot" ss:Weight="0"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s86_sty">
+  <Style ss:ID="s46_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Right" ss:Color="#FF0000" ss:LineStyle="Double" ss:Weight="2"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s87_sty">
+  <Style ss:ID="s47_sty">
    <Alignment/>
    <Borders>
     <Border ss:Position="Bottom" ss:Color="#FF0000" ss:LineStyle="SlantDashDot" ss:Weight="3"/>
    </Borders>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s88_sty">
+  <Style ss:ID="s48_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#FF7777" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s89_sty">
+  <Style ss:ID="s49_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#FF7777" ss:Pattern="Solid" ss:PatternColor="#00FFFF"/>
   </Style>
-  <Style ss:ID="s90_sty">
+  <Style ss:ID="s50_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="DiagCross" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s91_sty">
+  <Style ss:ID="s51_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="DiagStripe" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s92_sty">
+  <Style ss:ID="s52_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="Gray0625" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s93_sty">
+  <Style ss:ID="s53_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="Gray125" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s94_sty">
+  <Style ss:ID="s54_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="Gray25" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s95_sty">
+  <Style ss:ID="s55_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="Gray50" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s96_sty">
+  <Style ss:ID="s56_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="Gray75" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s97_sty">
+  <Style ss:ID="s57_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="HorzStripe" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s98_sty">
+  <Style ss:ID="s58_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="ReverseDiagStripe" ss:PatternColor="#0000FF"/>
   </Style>
-  <Style ss:ID="s99_sty">
+  <Style ss:ID="s59_sty">
    <Alignment/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
@@ -650,79 +388,79 @@
    <Column ss:Index="13" ss:AutoFitWidth="0" ss:Width="300.00"/>
    <Column ss:Index="14" ss:AutoFitWidth="0" ss:Width="300.00"/>
    <Row ss:Index="1">
-    <Cell ss:Index="1" ss:StyleID="s51_sty"><Data ss:Type="Number">3.14</Data></Cell>
+    <Cell ss:Index="1" ss:StyleID="s11_sty"><Data ss:Type="Number">3.14</Data></Cell>
    </Row>
    <Row ss:Index="2">
-    <Cell ss:Index="1" ss:StyleID="s52_sty"><Data ss:Type="Number">1234</Data></Cell>
+    <Cell ss:Index="1" ss:StyleID="s12_sty"><Data ss:Type="Number">1234</Data></Cell>
    </Row>
    <Row ss:Index="3">
-    <Cell ss:Index="1" ss:StyleID="s53_sty"><Data ss:Type="Number">123456</Data></Cell>
+    <Cell ss:Index="1" ss:StyleID="s13_sty"><Data ss:Type="Number">123456</Data></Cell>
    </Row>
    <Row ss:Index="4">
-    <Cell ss:Index="1" ss:StyleID="s54_sty"><Data ss:Type="Number">1234567890</Data></Cell>
+    <Cell ss:Index="1" ss:StyleID="s14_sty"><Data ss:Type="Number">1234567890</Data></Cell>
    </Row>
    <Row ss:Index="5" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s55_sty"><Data ss:Type="String">alignment_horizontal_center</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s56_sty"><Data ss:Type="String">alignment_horizontal_left</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s57_sty"><Data ss:Type="String">alignment_horizontal_right</Data></Cell>
-    <Cell ss:Index="5" ss:StyleID="s58_sty"><Data ss:Type="String">alignment_horizontal_center_across_selection</Data></Cell>
-    <Cell ss:Index="6" ss:StyleID="s59_sty"><Data ss:Type="String">alignment_horizontal_distributed</Data></Cell>
-    <Cell ss:Index="7" ss:StyleID="s60_sty"><Data ss:Type="String">alignment_horizontal_fill</Data></Cell>
-    <Cell ss:Index="8" ss:StyleID="s61_sty"><Data ss:Type="String">alignment_horizontal_justify</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s15_sty"><Data ss:Type="String">alignment_horizontal_center</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s16_sty"><Data ss:Type="String">alignment_horizontal_left</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s17_sty"><Data ss:Type="String">alignment_horizontal_right</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s18_sty"><Data ss:Type="String">alignment_horizontal_center_across_selection</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s19_sty"><Data ss:Type="String">alignment_horizontal_distributed</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s20_sty"><Data ss:Type="String">alignment_horizontal_fill</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s21_sty"><Data ss:Type="String">alignment_horizontal_justify</Data></Cell>
    </Row>
    <Row ss:Index="6" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s62_sty"><Data ss:Type="String">alignment_horizontal_center</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s63_sty"><Data ss:Type="String">alignment_horizontal_left</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s64_sty"><Data ss:Type="String">alignment_horizontal_right</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s22_sty"><Data ss:Type="String">alignment_horizontal_center</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s23_sty"><Data ss:Type="String">alignment_horizontal_left</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s24_sty"><Data ss:Type="String">alignment_horizontal_right</Data></Cell>
    </Row>
    <Row ss:Index="7" ss:Height="80.000000">
-    <Cell ss:Index="2" ss:StyleID="s65_sty"><Data ss:Type="String">alignment_vertical_center</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s66_sty"><Data ss:Type="String">alignment_vertical_bottom</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s67_sty"><Data ss:Type="String">alignment_vertical_distributed</Data></Cell>
-    <Cell ss:Index="5" ss:StyleID="s68_sty"><Data ss:Type="String">alignment_vertical_justify</Data></Cell>
-    <Cell ss:Index="6" ss:StyleID="s69_sty"><Data ss:Type="String">alignment_vertical_top</Data></Cell>
-    <Cell ss:Index="7" ss:StyleID="s70_sty"><Data ss:Type="String">alignment_vertical_none</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s25_sty"><Data ss:Type="String">alignment_vertical_center</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s26_sty"><Data ss:Type="String">alignment_vertical_bottom</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s27_sty"><Data ss:Type="String">alignment_vertical_distributed</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s28_sty"><Data ss:Type="String">alignment_vertical_justify</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s29_sty"><Data ss:Type="String">alignment_vertical_top</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s30_sty"><Data ss:Type="String">alignment_vertical_none</Data></Cell>
    </Row>
    <Row ss:Index="8" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s71_sty"><Data ss:Type="String">alignment_text_control_shrink_to_fit_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s72_sty"><Data ss:Type="String">alignment_text_control_wrap_text_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s31_sty"><Data ss:Type="String">alignment_text_control_shrink_to_fit_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s32_sty"><Data ss:Type="String">alignment_text_control_wrap_text_ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890</Data></Cell>
    </Row>
    <Row ss:Index="9" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s73_sty"><Data ss:Type="String">alignment_rotate_20</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s74_sty"><Data ss:Type="String">alignment_rotate_45</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s75_sty"><Data ss:Type="String">alignment_rotate_75</Data></Cell>
-    <Cell ss:Index="5" ss:StyleID="s76_sty"><Data ss:Type="String">alignment_rotate_90</Data></Cell>
-    <Cell ss:Index="6" ss:StyleID="s77_sty"><Data ss:Type="String">alignment_rotate_-45</Data></Cell>
-    <Cell ss:Index="7" ss:StyleID="s78_sty"><Data ss:Type="String">alignment_rotate_-90</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s33_sty"><Data ss:Type="String">alignment_rotate_20</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s34_sty"><Data ss:Type="String">alignment_rotate_45</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s35_sty"><Data ss:Type="String">alignment_rotate_75</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s36_sty"><Data ss:Type="String">alignment_rotate_90</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s37_sty"><Data ss:Type="String">alignment_rotate_-45</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s38_sty"><Data ss:Type="String">alignment_rotate_-90</Data></Cell>
    </Row>
    <Row ss:Index="10" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s79_sty"><Data ss:Type="String">set_font_id</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s39_sty"><Data ss:Type="String">set_font_id</Data></Cell>
    </Row>
    <Row ss:Index="11" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s80_sty"><Data ss:Type="String">set_default_boarders</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s40_sty"><Data ss:Type="String">set_default_boarders</Data></Cell>
    </Row>
    <Row ss:Index="12" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s81_sty"><Data ss:Type="String">set_border_bottom_continuous_thin</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s82_sty"><Data ss:Type="String">set_border_left_dash_hairline</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s83_sty"><Data ss:Type="String">set_border_top_dashdot_thick</Data></Cell>
-    <Cell ss:Index="5" ss:StyleID="s84_sty"><Data ss:Type="String">set_border_right_dashdotdot_medium</Data></Cell>
-    <Cell ss:Index="6" ss:StyleID="s85_sty"><Data ss:Type="String">set_border_top_dot_hairline</Data></Cell>
-    <Cell ss:Index="7" ss:StyleID="s86_sty"><Data ss:Type="String">set_border_right_double_medium</Data></Cell>
-    <Cell ss:Index="8" ss:StyleID="s87_sty"><Data ss:Type="String">set_border_bottom_slantdashdot_thick</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s41_sty"><Data ss:Type="String">set_border_bottom_continuous_thin</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s42_sty"><Data ss:Type="String">set_border_left_dash_hairline</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s43_sty"><Data ss:Type="String">set_border_top_dashdot_thick</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s44_sty"><Data ss:Type="String">set_border_right_dashdotdot_medium</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s45_sty"><Data ss:Type="String">set_border_top_dot_hairline</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s46_sty"><Data ss:Type="String">set_border_right_double_medium</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s47_sty"><Data ss:Type="String">set_border_bottom_slantdashdot_thick</Data></Cell>
    </Row>
    <Row ss:Index="13" ss:Height="40.000000">
-    <Cell ss:Index="2" ss:StyleID="s88_sty"><Data ss:Type="String">set_fill_pattern_style_solid</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s89_sty"><Data ss:Type="String">set_fill_pattern_style_solid2</Data></Cell>
-    <Cell ss:Index="4" ss:StyleID="s90_sty"><Data ss:Type="String">set_fill_pattern_style_diag_cross</Data></Cell>
-    <Cell ss:Index="5" ss:StyleID="s91_sty"><Data ss:Type="String">set_fill_pattern_style_diag_stripe</Data></Cell>
-    <Cell ss:Index="6" ss:StyleID="s92_sty"><Data ss:Type="String">set_fill_pattern_style_gray_0625</Data></Cell>
-    <Cell ss:Index="7" ss:StyleID="s93_sty"><Data ss:Type="String">set_fill_pattern_style_gray_125</Data></Cell>
-    <Cell ss:Index="8" ss:StyleID="s94_sty"><Data ss:Type="String">set_fill_pattern_style_gray_25</Data></Cell>
-    <Cell ss:Index="9" ss:StyleID="s95_sty"><Data ss:Type="String">set_fill_pattern_style_gray_50</Data></Cell>
-    <Cell ss:Index="10" ss:StyleID="s96_sty"><Data ss:Type="String">set_fill_pattern_style_gray_75</Data></Cell>
-    <Cell ss:Index="11" ss:StyleID="s97_sty"><Data ss:Type="String">set_fill_pattern_style_horz_stripe</Data></Cell>
-    <Cell ss:Index="12" ss:StyleID="s98_sty"><Data ss:Type="String">set_fill_pattern_style_reverse_diag_stripe</Data></Cell>
-    <Cell ss:Index="13" ss:StyleID="s99_sty"><Data ss:Type="String">set_fill_pattern_style_thick_diag_cross</Data></Cell>
+    <Cell ss:Index="2" ss:StyleID="s48_sty"><Data ss:Type="String">set_fill_pattern_style_solid</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s49_sty"><Data ss:Type="String">set_fill_pattern_style_solid2</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s50_sty"><Data ss:Type="String">set_fill_pattern_style_diag_cross</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s51_sty"><Data ss:Type="String">set_fill_pattern_style_diag_stripe</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s52_sty"><Data ss:Type="String">set_fill_pattern_style_gray_0625</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s53_sty"><Data ss:Type="String">set_fill_pattern_style_gray_125</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s54_sty"><Data ss:Type="String">set_fill_pattern_style_gray_25</Data></Cell>
+    <Cell ss:Index="9" ss:StyleID="s55_sty"><Data ss:Type="String">set_fill_pattern_style_gray_50</Data></Cell>
+    <Cell ss:Index="10" ss:StyleID="s56_sty"><Data ss:Type="String">set_fill_pattern_style_gray_75</Data></Cell>
+    <Cell ss:Index="11" ss:StyleID="s57_sty"><Data ss:Type="String">set_fill_pattern_style_horz_stripe</Data></Cell>
+    <Cell ss:Index="12" ss:StyleID="s58_sty"><Data ss:Type="String">set_fill_pattern_style_reverse_diag_stripe</Data></Cell>
+    <Cell ss:Index="13" ss:StyleID="s59_sty"><Data ss:Type="String">set_fill_pattern_style_thick_diag_cross</Data></Cell>
    </Row>
    <Row ss:Index="14" ss:Height="40.000000"/>
   </Table>

@@ -98,277 +98,31 @@
    <Interior ss:Color="#FFC000" ss:Pattern="Solid"/>
   </Style>
   <Style ss:ID="s11_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s12_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s13_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s14_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s15_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s16_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s17_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s18_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s19_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s20_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s21_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s22_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s23_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s24_sty">
-   <Alignment/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s25_sty">
    <Alignment ss:WrapText="1"/>
    <Borders/>
    <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s26_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s27_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s28_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s29_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s30_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s31_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s32_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s33_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s34_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s35_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s36_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s37_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s38_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s39_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s40_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s41_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="Short Date"/>
-  </Style>
-  <Style ss:ID="s42_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="h:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s43_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss;@"/>
-  </Style>
-  <Style ss:ID="s44_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="hh:mm:ss.000;@"/>
-  </Style>
-  <Style ss:ID="s45_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy/mm/dd;@"/>
-  </Style>
-  <Style ss:ID="s46_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yyyy&quot;년&quot;\ mm&quot;월&quot;\ dd&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s47_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
-  </Style>
-  <Style ss:ID="s48_sty">
-   <Alignment ss:WrapText="1"/>
-   <Borders/>
-   <Font ss:FontName="Tahoma" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#00FF00" ss:Pattern="Solid"/>
-   <NumberFormat ss:Format="yy&quot;년&quot;\ m&quot;월&quot;\ d&quot;일&quot;;@"/>
   </Style>
  </Styles>
  <Worksheet ss:Name="Sheet No 1">
   <Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="8" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5">
    <Row ss:Index="3">
-    <Cell ss:Index="3" ss:StyleID="s48_sty"><Data ss:Type="String">C3 Data</Data></Cell>
+    <Cell ss:Index="3" ss:StyleID="s11_sty"><Data ss:Type="String">C3 Data</Data></Cell>
    </Row>
    <Row ss:Index="4">
-    <Cell ss:Index="4" ss:StyleID="s48_sty"><Data ss:Type="String">D4 Data: &amp;</Data></Cell>
+    <Cell ss:Index="4" ss:StyleID="s11_sty"><Data ss:Type="String">D4 Data: &amp;</Data></Cell>
    </Row>
    <Row ss:Index="5">
-    <Cell ss:Index="5" ss:StyleID="s48_sty"><Data ss:Type="String">E5 Data: &lt;</Data></Cell>
+    <Cell ss:Index="5" ss:StyleID="s11_sty"><Data ss:Type="String">E5 Data: &lt;</Data></Cell>
    </Row>
    <Row ss:Index="6">
-    <Cell ss:Index="6" ss:StyleID="s48_sty"><Data ss:Type="String">F6 Data: &gt;</Data></Cell>
+    <Cell ss:Index="6" ss:StyleID="s11_sty"><Data ss:Type="String">F6 Data: &gt;</Data></Cell>
    </Row>
    <Row ss:Index="7">
-    <Cell ss:Index="7" ss:StyleID="s48_sty"><Data ss:Type="String">G7 Data: &quot;</Data></Cell>
+    <Cell ss:Index="7" ss:StyleID="s11_sty"><Data ss:Type="String">G7 Data: &quot;</Data></Cell>
    </Row>
    <Row ss:Index="8">
-    <Cell ss:Index="8" ss:StyleID="s48_sty"><Data ss:Type="String">H8 Data: &apos;</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s11_sty"><Data ss:Type="String">H8 Data: &apos;</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">

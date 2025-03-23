@@ -119,7 +119,7 @@ void print_xmlss(FILE* a_file) {
   m_writer.print_xmlss(m_model, a_file);
 }
 
-void initialize(void) {
+void initialize(void) { //for unit test
   m_api.initialize(m_model);
 }
 

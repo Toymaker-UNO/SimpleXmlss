@@ -28,6 +28,10 @@ public:
     try {
       utility::time_manager::instance().set_debug_flag(true);
       for(auto& iter : m_data) {
+        //for unit test initialize
+        builder::font::instance().initialize();
+        builder::style::instance().initialize();
+
         std::string test_name = iter->run();
         std::string file_name_1 = "./" + test_name + ".xml";
         std::string file_name_2 = a_example_dir + test_name + ".xml";
